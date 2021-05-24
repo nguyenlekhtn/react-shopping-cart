@@ -1,0 +1,24 @@
+.checkOutItem {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background: #ddd;
+  margin-top: 20px;
+  border: 2px solid var(--active);
+}
+
+.checkOutItem img {
+  width: 120px;
+}
+
+.checkOutItem_info {
+  margin-left: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkOutItem_info_main {
+  display: flex;
+  justify-content: space-between;
+}

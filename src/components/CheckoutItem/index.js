@@ -13,7 +13,7 @@ export default function CheckOutItem({ img, name, amount, price }) {
           <span>{loremName()}</span>
           <span>$ 1.99</span>
         </div>
-        <AmountBox amount={1} />
+        <AmountBox amount={1} style={{ marginTop: 20 }} />
       </div>
     </div>
   );
