@@ -1,4 +1,4 @@
-import CardItem from "../ShopItem/index";
+import ShopItem from "../ShopItem/index";
 import "./styles.css";
 import { useRouteMatch, Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ export default function CardGrid({ data }) {
   let match = useRouteMatch();
   const items = data.map((item) => (
     <Link key={item.id} to={`${match.url}/${item.id}`}>
-      <CardItem data={item} />
+      <ShopItem data={item} />
     </Link>
   ));
 

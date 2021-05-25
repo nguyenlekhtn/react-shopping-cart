@@ -1,20 +1,23 @@
-import "./styles.css";
+import styles from "./CheckoutItem.module.css";
 import AmountBox from "../AmountBox/index";
 
-import { Avatar, name as loremName } from "react-lorem-ipsum";
-
-export default function CheckOutItem({ img, name, amount, price }) {
+export default function CheckOutItem(props) {
+  const { img, name, amount, price } = props.data;
   return (
-    <div className="checkOutItem">
-      {/* <img src={img} alt={name} /> */}
-      <Avatar />
-      <div className="checkOutItem_info">
-        <div className="checkOutItem_info_main">
-          <span>{loremName()}</span>
-          <span>$ 1.99</span>
+    <li className={styles.checkOutItem}>
+      <img src={img} alt={name} className={styles.itemPic} />
+      <div className={styles.info}>
+        <div className={styles.main}>
+          <span>{name}</span>
+          <span>${price}</span>
         </div>
-        <AmountBox amount={1} style={{ marginTop: 20 }} />
+        <div className={styles.amountBoxWrapper}>
+          <AmountBox
+            amount={amount}
+            handleAmountChange={props.handleAmountChange}
+          />
+        </div>
       </div>
-    </div>
+    </li>
   );
 }

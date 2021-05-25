@@ -5,20 +5,29 @@
   background: #ddd;
   margin-top: 20px;
   border: 2px solid var(--active);
+  color: black;
 }
 
-.checkOutItem img {
+.checkOutItem:first-child {
+  margin-top: 0;
+}
+
+.itemPic {
   width: 120px;
 }
 
-.checkOutItem_info {
+.info {
   margin-left: 20px;
   width: 200px;
   display: flex;
   flex-direction: column;
 }
 
-.checkOutItem_info_main {
+.main {
   display: flex;
   justify-content: space-between;
+}
+
+.amountBoxWrapper {
+  margin-top: 10px;
 }

@@ -1,0 +1,33 @@
+.cart {
+  flex-grow: 1;
+  composes: columnContainer from "../shared/shared.module.css";
+  align-items: center;
+  color: white;
+}
+
+.title {
+  color: white;
+}
+
+.innerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.payment_info {
+  align-self: flex-start;
+  padding: 20px;
+  border: solid 2px white;
+  composes: columnContainer from "../shared/shared.module.css";
+}
+
+.buttonWrapper {
+  composes: container from "../shared/shared.module.css";
+  margin-top: 20px;
+}
+
+.button {
+  composes: button from "../shared/shared.module.css";
+  margin-left: 2px;
+}

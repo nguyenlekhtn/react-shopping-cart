@@ -11,8 +11,6 @@ const Data = (() => {
     require.context("./assets/images/items/", false, /\.(png|jpe?g|svg)$/)
   );
 
-  console.log(images);
-
   return [
     {
       id: 1,

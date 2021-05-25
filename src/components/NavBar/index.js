@@ -1,23 +1,27 @@
 import { NavLink } from "react-router-dom";
-import "./styles.css";
+import styles from "./NavBar.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
-    <nav className="nav-wrapper">
-      <h1 className="logo">HonkekShop</h1>
-      <ul>
-        <li>
-          <NavLink exact to="/">
-            Home
+    <nav className={styles.nav}>
+      <NavLink exact to="/" className={styles.navLink}>
+        <h1 className={styles.logo}>HonkekShop</h1>
+      </NavLink>
+      <ul className={styles.navList}>
+        <li className={styles.navItem}>
+          <NavLink to="/shop" className={styles.navLink}>
+            Shop
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/shop">Shop</NavLink>
-        </li>
-        <li>
-          <NavLink to="/cart">
+        <li className={styles.navItem}>
+          <NavLink
+            to="/cart"
+            className={styles.navLink}
+            activeClassName={styles.active}
+          >
             <FaShoppingCart />
+            <span className="amount">({props.amount})</span>
           </NavLink>
         </li>
       </ul>

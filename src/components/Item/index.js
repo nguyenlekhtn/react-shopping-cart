@@ -3,12 +3,32 @@ import { Link, useParams } from "react-router-dom";
 import Data from "../../Data";
 import "./styles.css";
 import { loremIpsum } from "react-lorem-ipsum";
+import AmountBox from "../AmountBox";
+import { useState } from "react";
 
-export default function Item() {
+export default function Item(props) {
   let { itemId } = useParams();
-  console.log(itemId);
+  itemId = parseInt(itemId);
+  const [amount, setAmount] = useState(1);
   const data = Data.filter((item) => item.id === parseInt(itemId))[0];
-  console.log(data);
+
+  const handleClickAddToCart = (e) => {
+    props.setCartItemsList((prevList) => {
+      if (prevList.filter((item) => item.itemId === itemId).length === 0) {
+        return [...prevList, { itemId, amount }];
+      } else {
+        const newList = prevList.map((item) => {
+          if (item.itemId === itemId) {
+            return { ...item, amount: item.amount + amount };
+          }
+          return item;
+        });
+        return newList;
+      }
+    });
+    setAmount(1);
+  };
+
   return (
     <div className="container">
       <div className="wrapper">
@@ -21,19 +41,23 @@ export default function Item() {
             Description: {loremIpsum({ avgSentencesPerParagraph: 3 })}
           </p>
           <p className="item_price">$ {data.price}</p>
+          <AmountBox handleAmountChange={setAmount} amount={amount} />
           <div className="icon-wrapper">
-            <Link>
-              <button className="button addToCart" type="button">
-                Add to Cart
-              </button>
-            </Link>
-            <div class="icon-wrapper_bottom">
+            <button
+              className="button addToCart"
+              type="button"
+              onClick={handleClickAddToCart}
+            >
+              Add to Cart
+            </button>
+
+            <div className="icon-wrapper_bottom">
               <Link to="/cart">
                 <button className="button checkout" type="button">
                   checkout
                 </button>
               </Link>
-              <Link>
+              <Link to="/shop">
                 <button className="button back" type="button">
                   Back to Shop
                 </button>

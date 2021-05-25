@@ -1,4 +1,4 @@
-nav {
+.nav {
   font-size: 2rem;
   /* min-height: 10%; */
   display: flex;
@@ -12,9 +12,12 @@ nav {
 .logo {
   font-size: 1em;
   margin: 0;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.25em;
 }
 
-nav > ul {
+.navList {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -22,7 +25,12 @@ nav > ul {
   align-items: center;
 }
 
-li > a {
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navItem > .navLink {
   text-decoration: none;
   color: var(--main);
   font-size: 1em;
@@ -33,16 +41,15 @@ li > a {
   align-items: center;
 }
 
-ul > li {
-  display: flex;
-  align-items: center;
-}
-
-li > a:hover {
+.navItem > .navLink:hover {
   color: var(--active);
   background-color: #130c2c;
 }
 
 .active {
   color: var(--active);
+}
+
+.amount {
+  color: red;
 }

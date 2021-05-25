@@ -1,16 +1,12 @@
-import CardGrid from "../CardGrid/index";
 import "./styles.css";
-import data from "../../Data";
 
-export default function Shop() {
-  console.log(data);
-
+export default function Shop(props) {
   return (
     <div className="shop">
       <header className="header">
         <h1 className="header_title">Shop</h1>
       </header>
-      <CardGrid data={data} />
+      {props.children}
     </div>
   );
 }

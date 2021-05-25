@@ -36,6 +36,10 @@
   margin: 0;
 }
 
+.addToCart {
+  margin-top: 5px;
+}
+
 .button {
   border: none;
   font-size: 18px;
