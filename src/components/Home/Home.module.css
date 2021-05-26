@@ -1,7 +1,5 @@
 .home {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  composes: outerFlex from "../shared/shared.module.css";
   justify-content: center;
   align-items: flex-start;
 }
@@ -15,39 +13,25 @@
   margin: auto 3rem;
 }
 
-.info > h1 {
+.title {
   font-size: 2em;
   letter-spacing: 0.25em;
 }
 
-.info button {
-  text-align: center;
-  padding: 0.5em 1.2em;
-  background-color: var(--active);
-  color: white;
-  border: none;
-  border-radius: 2px;
+.button {
+  composes: button from "../shared/shared.module.css";
   margin-top: 3em;
   font-size: 1.5em;
-  transition: all 0.3s ease-in-out;
 }
 
-.info button:hover {
-  background-color: white;
-  color: var(--back);
-}
-
-.icon-wrapper > svg:first-child {
+.icon {
   margin: 0 0.7em;
   transform-box: fill-box;
   transform-origin: center;
   animation: arrowLeft 0.4s ease-in-out infinite alternate;
 }
 
-.icon-wrapper > svg:last-child {
-  margin: 0 0.7em;
-  transform-box: fill-box;
-  transform-origin: center;
+.icon:last-child {
   animation: arrowRight 0.4s ease-in-out infinite alternate;
 }
 

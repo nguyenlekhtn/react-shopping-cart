@@ -1,7 +1,8 @@
 import backgroundImg from "../../assets/images/haxxor.png";
-import "./styles.css";
+import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 export default function Home() {
   const homeStyle = {
@@ -13,19 +14,23 @@ export default function Home() {
   };
 
   return (
-    <div className="home" style={homeStyle}>
-      <div className="info">
-        <h1>HonkekShop</h1>
+    <div className={styles.home} style={homeStyle}>
+      <div className={styles.info}>
+        <h1 className={styles.title}>HonkekShop</h1>
         <span>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsa!
         </span>
 
-        <div className="icon-wrapper">
-          <FaChevronRight />
-          <Link to="/shop">
-            <button type="button">Shop now</button>
-          </Link>
-          <FaChevronLeft />
+        <div className={styles.iconWrapper}>
+          <IconContext.Provider value={{ className: styles.icon }}>
+            <FaChevronRight />
+            <Link to="/shop">
+              <button type="button" className={styles.button}>
+                Shop now
+              </button>
+            </Link>
+            <FaChevronLeft />
+          </IconContext.Provider>
         </div>
       </div>
     </div>

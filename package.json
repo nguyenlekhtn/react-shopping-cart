@@ -1,5 +1,6 @@
 {
   "name": "react-shopping-cart",
+  "homepage": "https://nguyenlekhtn.github.io/react-shopping-cart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,6 +47,5 @@
     "gh-pages": "^3.2.0",
     "import-all.macro": "^3.1.0",
     "sass": "^1.34.0"
-  },
-  "home": "https://nguyenlekhtn.github.io/react-shopping-cart"
+  }
 }

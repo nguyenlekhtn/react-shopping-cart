@@ -1,8 +1,6 @@
 .shop {
-  display: flex;
-  flex-direction: column;
+  composes: outerFlex from "../shared/shared.module.css";
   align-items: center;
-  height: 100%;
   padding: 2em;
   color: white;
 }

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/index";
 import Shop from "./components/Shop/index";
@@ -39,19 +39,11 @@ function App(props) {
     />
   );
 
-  useEffect(() => {
-    console.log(cartItemsList);
-    if (cartItemsList !== []) {
-      const notZero = cartItemsList.filter((item) => item.amount !== 0);
-      setCartItemsList(notZero);
-    }
-  }, [cartItemsList]);
-
   return (
-    <Router>
-      <div className="app">
+    <Router basename={process.env.PUBLIC_URL}>
+      <div className={styles.app}>
         <NavBar amount={cartItemsList.length} />
-        <main className="main">
+        <main className={styles.main}>
           <Switch>
             <Route exact path="/">
               <Home />

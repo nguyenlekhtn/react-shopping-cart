@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-.app > .main {
+.main {
   display: flex;
   justify-content: center;
   flex: 1 1 0%;
