@@ -19,3 +19,5 @@ npm start
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [CSS Module](https://github.com/css-modules/css-modules)
