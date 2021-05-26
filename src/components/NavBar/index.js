@@ -10,7 +10,11 @@ const NavBar = (props) => {
       </NavLink>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <NavLink to="/shop" className={styles.navLink}>
+          <NavLink
+            to="/shop"
+            className={styles.navLink}
+            activeStyle={{ color: "#018961" }}
+          >
             Shop
           </NavLink>
         </li>
@@ -18,7 +22,7 @@ const NavBar = (props) => {
           <NavLink
             to="/cart"
             className={styles.navLink}
-            activeClassName={styles.active}
+            activeStyle={{ color: "#018961" }}
           >
             <FaShoppingCart />
             <span className="amount">({props.amount})</span>

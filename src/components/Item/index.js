@@ -5,11 +5,13 @@ import "./styles.css";
 import { loremIpsum } from "react-lorem-ipsum";
 import AmountBox from "../AmountBox";
 import { useState } from "react";
+import { FaCheck } from "react-icons/fa";
 
 export default function Item(props) {
   let { itemId } = useParams();
   itemId = parseInt(itemId);
   const [amount, setAmount] = useState(1);
+  const [addedToCart, setAddedToCart] = useState(false);
   const data = Data.filter((item) => item.id === parseInt(itemId))[0];
 
   const handleClickAddToCart = (e) => {
@@ -27,6 +29,7 @@ export default function Item(props) {
       }
     });
     setAmount(1);
+    setAddedToCart(true);
   };
 
   return (
@@ -43,20 +46,25 @@ export default function Item(props) {
           <p className="item_price">$ {data.price}</p>
           <AmountBox handleAmountChange={setAmount} amount={amount} />
           <div className="icon-wrapper">
-            <button
-              className="button addToCart"
-              type="button"
-              onClick={handleClickAddToCart}
-            >
-              Add to Cart
-            </button>
+            <div className="icon-wrapper_top">
+              {addedToCart && (
+                <Link to="/cart">
+                  <button className="button checkout" type="button">
+                    checkout
+                  </button>
+                </Link>
+              )}
+              <button
+                className="button addToCart"
+                type="button"
+                onClick={handleClickAddToCart}
+              >
+                Add to Cart
+                {addedToCart && <FaCheck />}
+              </button>
+            </div>
 
             <div className="icon-wrapper_bottom">
-              <Link to="/cart">
-                <button className="button checkout" type="button">
-                  checkout
-                </button>
-              </Link>
               <Link to="/shop">
                 <button className="button back" type="button">
                   Back to Shop

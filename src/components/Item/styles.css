@@ -37,7 +37,18 @@
 }
 
 .addToCart {
-  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.addToCart svg {
+  margin-left: 1em;
+}
+
+.addToCart:active {
+  background-color: black;
 }
 
 .button {
@@ -69,6 +80,12 @@
   height: 100%;
 }
 
+.icon-wrapper_top {
+  display: flex;
+  margin-top: 10px;
+  align-items: stretch;
+}
+
 .icon-wrapper_bottom {
   display: flex;
 }
@@ -79,4 +96,8 @@
 
 .icon-wrapper_bottom .button:first-child {
   margin-left: 0;
+}
+
+.checkout {
+  background-color: rgb(163, 27, 27);
 }

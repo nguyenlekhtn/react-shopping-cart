@@ -28,7 +28,7 @@ function App(props) {
     const itemId = current.itemId;
     const price = products.filter((products) => products.id === itemId)[0]
       .price;
-    return acc + current.amount * price;
+    return Math.ceil(acc + current.amount * price);
   }, 0);
 
   const purchaseList = (
@@ -39,16 +39,13 @@ function App(props) {
     />
   );
 
-  // const changeItemMount = (itemId) => {
-  //   setCartItemsList((prevList) => {
-  //     if (prevList.filter((item) => item.itemId === itemId).length === 0) {
-  //     }
-  //   });
-  // };
-
   useEffect(() => {
     console.log(cartItemsList);
-  });
+    if (cartItemsList !== []) {
+      const notZero = cartItemsList.filter((item) => item.amount !== 0);
+      setCartItemsList(notZero);
+    }
+  }, [cartItemsList]);
 
   return (
     <Router>
