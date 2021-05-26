@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.19d19f2c.chunk.css",
+    "main.js": "/static/js/main.d1f5961f.chunk.js",
+    "main.js.map": "/static/js/main.d1f5961f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b26aceb6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b26aceb6.js.map",
+    "static/js/2.4abab109.chunk.js": "/static/js/2.4abab109.chunk.js",
+    "static/js/2.4abab109.chunk.js.map": "/static/js/2.4abab109.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.19d19f2c.chunk.css.map": "/static/css/main.19d19f2c.chunk.css.map",
+    "static/js/2.4abab109.chunk.js.LICENSE.txt": "/static/js/2.4abab109.chunk.js.LICENSE.txt",
+    "static/media/bronya.jpg": "/static/media/bronya.7dee4b7e.jpg",
+    "static/media/durandal.jpg": "/static/media/durandal.bc421d30.jpg",
+    "static/media/haxxor.449930c3.png": "/static/media/haxxor.449930c3.png",
+    "static/media/kiana.jpg": "/static/media/kiana.c0294bff.jpg",
+    "static/media/mei.jpg": "/static/media/mei.d7b0be09.jpg",
+    "static/media/rita.jpg": "/static/media/rita.1715faf0.jpg",
+    "static/media/selee.jpg": "/static/media/selee.e381cc6a.jpg",
+    "static/media/theresa.jpg": "/static/media/theresa.fa6d7204.jpg",
+    "static/media/yae.jpg": "/static/media/yae.3aae3e65.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b26aceb6.js",
+    "static/js/2.4abab109.chunk.js",
+    "static/css/main.19d19f2c.chunk.css",
+    "static/js/main.d1f5961f.chunk.js"
+  ]
+}
